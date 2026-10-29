@@ -1,0 +1,23 @@
+-- -- Insert admin user (password: admin123)
+-- INSERT INTO users (email, password_hash, first_name, last_name, phone, role_id, is_active)
+-- SELECT
+--     'admin@theclearvision.com',
+--     '$2a$10$8.UnVuG9HHgffUDAlk8qfOuWk6K7aFjV0V3nqM7q.7G.2sQ9q.1W.',
+--     'Admin',
+--     'User',
+--     '+1234567890',
+--     id,
+--     TRUE
+-- FROM roles WHERE name = 'ADMIN';
+--
+-- -- Insert admin address
+-- INSERT INTO customers_addresses (user_id, label, line1, line2, city, postal_code, is_default)
+-- SELECT
+--     u.id,
+--     'Head Office',
+--     '123 Optical Street',
+--     'Suite 100',
+--     'Vision City',
+--     '12345',
+--     TRUE
+-- FROM users u WHERE u.email = 'admin@theclearvision.com';
